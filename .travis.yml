@@ -28,5 +28,5 @@ install:
 script:
     # Run the Arduino sketch's unit tests
     - cd $TRAVIS_BUILD_DIR/Arduino_code/
-    - build_main_platforms
+    - build_platform mega2560
     
