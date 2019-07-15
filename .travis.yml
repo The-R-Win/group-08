@@ -23,11 +23,7 @@ install:
 script:
     # Run the Arduino sketch's unit tests
     - cd $TRAVIS_BUILD_DIR/Arduino_code/
-    - mkdir -p build
-    - cd build
-    - cmake ..
-    - make
-    - ctest
+    - arduino --verify Arduino_code.ino
     # Build all .ino files for Arduino Mega
     - cd $TRAVIS_BUILD_DIR/arduino
     - build_platform mega2560
