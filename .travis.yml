@@ -1,5 +1,10 @@
 language: bash
 
+env:
+    global:
+        # Use a modern C++ compiler
+        - CXX=g++-6
+        
 compiler:
     - g++
 
@@ -23,7 +28,5 @@ install:
 script:
     # Run the Arduino sketch's unit tests
     - cd $TRAVIS_BUILD_DIR/Arduino_code/
-    - arduino --verify Arduino_code.ino
-    # Build all .ino files for Arduino Mega
-    - cd $TRAVIS_BUILD_DIR/arduino
-    - build_platform mega2560
+    - build_main_platforms
+    
