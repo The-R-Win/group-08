@@ -1,5 +1,10 @@
 language: bash
 
+cache:
+  directories:
+    - ~/arduino_ide
+    - ~/.arduino15/packages/
+
 env:
     global:
         # Use a modern C++ compiler
