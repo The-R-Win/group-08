@@ -48,7 +48,7 @@ before_script:
     - adb devices # Display list of devices
     - adb shell input keyevent 82 &
     # Set `gradlew` as executable
-    - chmod +x $TRAVIS_BUILD_DIR/android/gradlew
+    - chmod +x $TRAVIS_BUILD_DIR/Android_Application_for_SmartCar/gradlew
 
 before_install:
     # Install Android 9 SDK and accept its user agreement
