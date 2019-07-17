@@ -63,12 +63,16 @@ install:
 script:
      # Build the Android app
     - cd $TRAVIS_BUILD_DIR/Android_Application_for_SmartCar
+    - echo "Starting ./gradlew build --stacktrace Section: "
     - ./gradlew build --stacktrace
     # Run the Android app's unit tests
+    - echo "Starting ./gradlew test --info Section: "
     - ./gradlew test --info
     # Run the Android app's instrumented tests
+    - echo "Starting ./gradlew connectedAndroidTest Section: "
     - ./gradlew connectedAndroidTest
     # Run the Arduino sketch's unit tests
+    - echo "Starting Arduino Code Compilation"
     - cd $TRAVIS_BUILD_DIR/Arduino_code/
     - build_platform mega2560
     
