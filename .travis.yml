@@ -72,7 +72,8 @@ script:
     - echo "Starting ./gradlew connectedAndroidTest Section: "
     - ./gradlew connectedAndroidTest
     # Run the Arduino sketch's unit tests
-    - echo "Starting Arduino Code Compilation"
+    - echo "Starting Arduino Code Compilation "
     - cd $TRAVIS_BUILD_DIR/Arduino_code/
     - build_platform mega2560
+    - cd $TRAVIS_BUILD_DIR/
     
