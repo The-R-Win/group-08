@@ -63,5 +63,5 @@ install:
 script:
      # Build the Android app
     - cd $TRAVIS_BUILD_DIR/Android_Application_for_SmartCar
-    - ./gradlew build --stacktrace
+    - ./gradlew build --stacktrace --info
 
